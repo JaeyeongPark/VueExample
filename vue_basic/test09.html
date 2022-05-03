@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #btn1{
+            width: 200px;
+            background-color: blueviolet;
+        }
+        .btn1{
+            width: 250px;
+            background-color: rgb(84,219,240);
+        }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h2>v-Show</h2>
+        <div v-show="isShow">{{msg}}</div>
+         <button @click="isShow=!isShow">클릭</button>
+    </div>
+    <script>
+        new Vue({
+            el: "#app",
+            data() {
+                 return{
+                  msg: "Hello SSAFY!!!",
+                  isShow: true,
+                 };
+             },
+        }); 
+    </script>
+</body>
+</html>
