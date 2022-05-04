@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="module">
+        //var는 function  let,const는 block단위
+        // Destructuring Assignment(비구조 할당)
+        var user = {
+            id:'ssafy',
+            name:'김싸피',
+            age:7
+        };
+
+        console.log(user);
+        //기존 방식
+        {
+            let id = user.id;
+            let name = user.name;
+            let age = user.age;
+            console.log(id+","+name+","+age);
+        }
+
+        // Destructuring Assignment 
+        {
+            let{id,name,age} = user;
+            console.log(id+","+name+","+age);
+        }
+        //이름이 다른경우의 Dstructuring Assignment
+        {
+            let{id : ssafyid, name : ssafyname, age : ssafyage} = user;
+            console.log(ssafyid+","+ssafyname+","+ssafyage);
+        }
+        //배열에서의 Destructuring Assignment
+        const arr = ['서울','대전','구미','광주','부울경']
+        //기존
+        {
+            const a1 = arr[0];
+            const a2 = arr[1];
+            const a3 = arr[2];
+            const a4 = arr[3];
+            const a5 = arr[4];
+            console.log(a1+","+a2+","+a3+","+a4+","+a5);
+        }
+        // Destructuring Assignment 
+        {
+            let [a1,a2,a3,a4,a5] = arr;
+            console.log(a1+","+a2+","+a3+","+a4+","+a5);
+        }
+
+        //객체를 리턴하는 함수
+        function getUser(){
+            return {
+                id:'ssafy',
+                name:'홍싸피',
+                age:7
+            }
+        }
+
+        //기존
+        {
+            let user = getUser();
+            console.log(user);
+            let id = user.id;
+            let name = user.name;
+            let age = user.age;
+            console.log(id+","+name+","+age);
+        }
+        // Destructuring Assignment 
+        {
+            let{id,name,age} = getUser();
+            console.log(id+","+name+","+age);
+        }
+        //객체의 외부모듈화 (script type="module")
+        import userobj from "./module.js"
+        {
+            let{id,name,age} = userobj;
+            console.log(id+","+name+","+age);
+        }
+        let user1 = {id:'대전',name:'ssafy',age:5}
+        //기존
+        function showUserInfo1(user){
+            console.log("아이디 : "+user.id);
+            console.log("이름 : "+user.name);
+            console.log("나이 : "+user.age);
+        }
+
+        showUserInfo1(user1);
+        //Destructuring Assignment
+        function showUserInfo2({id,name,age}){
+            console.log("아이디 : "+id);
+            console.log("이름 : "+name);
+            console.log("나이 : "+age);
+        }
+
+        showUserInfo2(user1);
+    </script>
+</body>
+</html>

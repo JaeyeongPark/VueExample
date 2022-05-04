@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function print1(msg){
+            console.log(arguments.length);
+            for(let i=0; i<arguments.length;i++){
+                console.log(arguments[i]);
+            }
+        }
+        print1();
+        print1('ssafy');
+        print1('ssafy','hello');
+        print1('ssafy','hello','daejeon');
+    
+        // defualt parameter
+        function print2(msg = '기본값'){
+            console.log(msg);
+        }
+        console.log('--------------------------------');
+        print2();
+        print2('ssafy');
+    </script>
+</body>
+</html>

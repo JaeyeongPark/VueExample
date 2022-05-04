@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //SpreadSyntax
+
+        const user1 = {name:'ssafy1'};
+        const user2 = {name:'ssafy2'};
+        const arr = [user1,user2];
+        
+        console.log(arr);
+
+        arr[0].name = 'hello';
+        const arr2 = arr;
+
+        console.log(arr2);
+
+        //[user1,user2] 와 [...arr]는 같다
+        //주소값을 복사해서 CallbyValue
+        const arr3 = [user1,user2];       
+        const arr4 = [...arr]; //SpreadSyntax
+        console.log(arr3);
+        console.log(arr4);
+
+        const arr5 = [1,2];
+        const arr6 = [arr5[0],arr5[1],3];
+        console.log(arr6);
+
+        const arr7=[...arr5,3];
+        console.log(arr7);
+
+        const arr8 = [...arr3,{name:'ssafy3'}];
+        console.log(arr8);
+
+        const obj1 = {...user1};
+        console.log(obj1);
+
+        const area1 = ["서울","대전"];
+        const area2 = ["구미","광주"];
+        const area3 = [...area1,...area2];
+        console.log(area3);
+
+        const user3 = {id:'ssafy',pw:'ssafypw'};
+        const user4 = {name:'김싸피', age:7};
+        const user5 = {...user3,...user4};
+        console.log(user5);
+
+        const user6 = {name:'ssafy', pw:'changessafypw'};
+        const user7 = {...user3,...user6};
+        console.log(user7);
+    </script>
+</body>
+</html>

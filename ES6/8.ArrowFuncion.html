@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //화살표 함수
+        const func1 = function(){
+            console.log('익명함수');
+        }
+        func1();
+        
+        const func2 = () => console.log('화살표함수');
+        
+        func2();
+        //-------------------------------------------------------------
+        const func3 = function(num){
+            console.log(num);
+        }
+        func3(10);
+
+        //화살표함수는 function생략 가능
+        const func4 = (num)=>{
+            console.log(num);
+        }
+        func4(20);
+
+        //인자가 하나일때 괄호 생략 가능
+        const func5 = num => console.log(num);
+        func5(30);
+        //---------------------------------------------------
+        //인자가 2개 이상인 경우
+        const func6 = function(num1,num2){
+            console.log(`num1 = ${num1}이고 num2 = ${num2}입니다`);
+        }
+        func6(10,20);
+
+        //인자가 2개 이상인 경우에는 () 삭제 불가능
+        const func7 = (num1,num2)=>{
+            console.log(`num1 = ${num1}이고 num2 = ${num2}입니다`);
+        }
+        func7(10,20);
+        //---------------------------------------------------------------
+        const func8 = function(num){
+            return num * num;
+        }
+        console.log(func8(6));
+        
+        //return 생략 가능
+        const func9 = (num)=> num * num;
+        
+        console.log(func9(9));
+
+        //파라미터와 화살표사이에 개행불가 문법적 오류
+        /*
+        const func10 = num
+        => num * num;
+        
+        */
+
+    </script>
+</body>
+</html>
