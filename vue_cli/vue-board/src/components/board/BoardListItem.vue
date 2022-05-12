@@ -7,12 +7,6 @@
         >{{ article.subject }}</router-link
       >
     </td>
-    <td>
-      <router-link
-        :to="{ name: 'detail', params: { articleno: article.articleno } }"
-        >{{ article.subject }}</router-link
-      >
-    </td>
     <td>{{ article.userid }}</td>
     <td>{{ article.regtime | formatDate }}</td>
   </tr>

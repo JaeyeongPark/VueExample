@@ -54,7 +54,7 @@ export default {
   },
   methods: {
     movePage() {
-      this.$router.push("/register");
+      this.$router.push("/board/write");
     },
   },
 };
